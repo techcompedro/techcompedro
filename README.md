@@ -2,7 +2,7 @@
 
 
 
-![snake gif](https://github.com/artur-debv/artur-debv/blob/output/github-contribution-grid-snake.svg)
+![snake gif](https://github.com/techcompedro/artur-debv/blob/output/github-contribution-grid-snake.svg)
 
 <!--
 **techcompedro/techcompedro** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
