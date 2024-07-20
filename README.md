@@ -13,29 +13,60 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
-name: Generate Snake
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pato Pulando</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        svg {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <!-- Corpo do pato -->
+        <circle cx="50" cy="50" r="10" fill="yellow" />
+        <!-- Cabeça do pato -->
+        <circle cx="50" cy="35" r="5" fill="yellow" />
+        <!-- Bico do pato -->
+        <polygon points="53,35 60,33 53,37" fill="orange" />
+        <!-- Olho do pato -->
+        <circle cx="48" cy="34" r="1" fill="black" />
+    </svg>
 
-on:
-  schedule:
-    - cron: "0 0 * * *"  # Runs every day at midnight
-  workflow_dispatch:
+    <script>
+        const svg = document.querySelector('svg');
+        const pato = svg.querySelectorAll('circle, polygon');
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: Platane/snk@v3
-        with:
-          github_user_name: ${{ github.repository_owner }}
-          outputs: |
-            dist/github-snake.svg
-            dist/github-snake-dark.svg?palette=github-dark
+        function jump() {
+            pato.forEach(element => {
+                element.animate([
+                    { transform: 'translateY(0)' },
+                    { transform: 'translateY(-20px)' },
+                    { transform: 'translateY(0)' }
+                ], {
+                    duration: 500,
+                    easing: 'ease-in-out'
+                });
+            });
+        }
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="dist/github-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="dist/github-snake.svg" />
-  <img alt="github-snake" src="dist/github-snake.svg" />
-</picture>
+        setInterval(jump, 1000);
+    </script>
+</body>
+</html>
+
 
 
