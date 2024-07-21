@@ -17,8 +17,8 @@ Here are some ideas to get you started:
   <img src="https://raw.githubusercontent.com/MicaelliMedeiros/micaellimedeiros/master/image/computer-illustration.png" alt="ilustração de um computador" min-width="400px" max-width="400px" width="400px" align="right">
 
 <p align="left"> 
-  Faça uma breve aprensentação sua com o seu nome e não esqueça a <strong>Sua stack</strong>.<br>
-  Diga o que você está fazendo no momento, se trabalha ou estuda.
+  oi meu nome é pedro e momento sou desenvolvedor full stack <strong>Sua stack</strong>.<br>
+ 
 </p>
 
 <p align="left">
@@ -45,7 +45,55 @@ Here are some ideas to get you started:
   <a href="#" title="Instagram">
   <img src="https://img.shields.io/badge/-Instagram-DF0174?style=flat-square&labelColor=DF0174&logo=instagram&logoColor=white&link=LINK-DO-SEU-INSTAGRAM" alt="Instagram"/></a>
 </p>          
-    
+     <title>Pato Pulando</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        svg {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <!-- Corpo do pato -->
+        <circle cx="50" cy="50" r="10" fill="yellow" />
+        <!-- Cabeça do pato -->
+        <circle cx="50" cy="35" r="5" fill="yellow" />
+        <!-- Bico do pato -->
+        <polygon points="53,35 60,33 53,37" fill="orange" />
+        <!-- Olho do pato -->
+        <circle cx="48" cy="34" r="1" fill="black" />
+    </svg>
+
+    <script>
+        const svg = document.querySelector('svg');
+        const pato = svg.querySelectorAll('circle, polygon');
+
+        function jump() {
+            pato.forEach(element => {
+                element.animate([
+                    { transform: 'translateY(0)' },
+                    { transform: 'translateY(-20px)' },
+                    { transform: 'translateY(0)' }
+                ], {
+                    duration: 500,
+                    easing: 'ease-in-out'
+                });
+            });
+        }
+
+        setInterval(jump, 1000);
+    </script>
+
+
        
 </body>
 </html>
