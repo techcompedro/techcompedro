@@ -22,11 +22,11 @@ Here are some ideas to get you started:
 </p>
 
 <p align="left">
-  🦄 Linguagens: **Coloque as linguagens que você desenvolve.**
+  🦄 Linguagens: **python, html.**
 </p>
 
 <p align="left">
-  💼 Ferramentas: **Coloque as suas ferramentas de trabalho.**
+  💼 Ferramentas: **eu uso so as melhores ferramentas.**
 </p>
 
 <p align="left">
@@ -45,53 +45,9 @@ Here are some ideas to get you started:
   <a href="#" title="Instagram">
   <img src="https://img.shields.io/badge/-Instagram-DF0174?style=flat-square&labelColor=DF0174&logo=instagram&logoColor=white&link=LINK-DO-SEU-INSTAGRAM" alt="Instagram"/></a>
 </p>          
-     <title>Pato Pulando</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f0f0f0;
-            margin: 0;
-        }
-        svg {
-            width: 200px;
-            height: 200px;
-        }
-    </style>
-</head>
-<body>
-    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <!-- Corpo do pato -->
-        <circle cx="50" cy="50" r="10" fill="yellow" />
-        <!-- Cabeça do pato -->
-        <circle cx="50" cy="35" r="5" fill="yellow" />
-        <!-- Bico do pato -->
-        <polygon points="53,35 60,33 53,37" fill="orange" />
-        <!-- Olho do pato -->
-        <circle cx="48" cy="34" r="1" fill="black" />
-    </svg>
+  
 
-    <script>
-        const svg = document.querySelector('svg');
-        const pato = svg.querySelectorAll('circle, polygon');
-
-        function jump() {
-            pato.forEach(element => {
-                element.animate([
-                    { transform: 'translateY(0)' },
-                    { transform: 'translateY(-20px)' },
-                    { transform: 'translateY(0)' }
-                ], {
-                    duration: 500,
-                    easing: 'ease-in-out'
-                });
-            });
-        }
-
-        setInterval(jump, 1000);
-    </script>
+    
 
 
        
